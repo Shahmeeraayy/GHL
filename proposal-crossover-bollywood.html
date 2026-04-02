@@ -1,0 +1,1137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GoHighLevel CRM Proposal — Crossover Bollywood</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --gold: #C9A84C;
+    --gold-light: #F0DFA0;
+    --gold-dark: #8B6914;
+    --ink: #1A1714;
+    --ink-mid: #3D3830;
+    --ink-soft: #6B6257;
+    --cream: #FAF7F2;
+    --cream-mid: #F0EBE0;
+    --cream-dark: #E0D8CA;
+    --white: #FFFFFF;
+    --accent: #8B6914;
+    --green: #2D6A4F;
+    --green-light: #D8EDDF;
+  }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--cream);
+    color: var(--ink);
+    line-height: 1.7;
+    font-size: 15px;
+  }
+
+  /* COVER */
+  .cover {
+    background: var(--ink);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 60px 80px;
+    position: relative;
+    overflow: hidden;
+    page-break-after: always;
+  }
+
+  .cover::before {
+    content: '';
+    position: absolute;
+    top: -120px; right: -120px;
+    width: 500px; height: 500px;
+    border-radius: 50%;
+    border: 1px solid rgba(201,168,76,0.15);
+  }
+  .cover::after {
+    content: '';
+    position: absolute;
+    bottom: -80px; left: -80px;
+    width: 350px; height: 350px;
+    border-radius: 50%;
+    border: 1px solid rgba(201,168,76,0.10);
+  }
+
+  .cover-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .cover-badge {
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gold);
+    border: 1px solid rgba(201,168,76,0.4);
+    padding: 6px 14px;
+    border-radius: 2px;
+  }
+
+  .cover-date {
+    font-size: 12px;
+    color: rgba(255,255,255,0.4);
+    letter-spacing: 0.06em;
+  }
+
+  .cover-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 80px 0 40px;
+  }
+
+  .cover-label {
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 24px;
+  }
+
+  .cover-h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(42px, 5vw, 64px);
+    line-height: 1.1;
+    color: var(--white);
+    margin-bottom: 12px;
+  }
+
+  .cover-h1 em {
+    font-style: italic;
+    color: var(--gold-light);
+  }
+
+  .cover-sub {
+    font-size: 16px;
+    color: rgba(255,255,255,0.5);
+    font-weight: 300;
+    margin-top: 20px;
+    max-width: 480px;
+    line-height: 1.6;
+  }
+
+  .cover-divider {
+    width: 60px;
+    height: 1px;
+    background: var(--gold);
+    margin: 32px 0;
+    opacity: 0.6;
+  }
+
+  .cover-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    padding-top: 32px;
+  }
+
+  .cover-for {
+    font-size: 12px;
+    color: rgba(255,255,255,0.35);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .cover-salon {
+    font-size: 18px;
+    color: var(--white);
+    font-weight: 500;
+    margin-top: 6px;
+  }
+
+  .cover-rating {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: var(--gold);
+  }
+
+  .stars { letter-spacing: 2px; }
+
+  /* MAIN CONTENT */
+  .page {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 80px 60px;
+  }
+
+  @media (max-width: 640px) {
+    .cover { padding: 40px 28px; }
+    .page { padding: 48px 24px; }
+  }
+
+  /* SECTION HEADERS */
+  .section-num {
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--gold-dark);
+    margin-bottom: 8px;
+    display: block;
+  }
+
+  .section-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: 32px;
+    line-height: 1.2;
+    color: var(--ink);
+    margin-bottom: 24px;
+  }
+
+  .section-title em {
+    font-style: italic;
+    color: var(--gold-dark);
+  }
+
+  hr.rule {
+    border: none;
+    border-top: 1px solid var(--cream-dark);
+    margin: 56px 0;
+  }
+
+  /* OBSERVATION CARDS */
+  .observation-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    margin: 32px 0;
+  }
+
+  .obs-card {
+    background: var(--white);
+    border: 1px solid var(--cream-dark);
+    border-radius: 8px;
+    padding: 20px;
+  }
+
+  .obs-icon {
+    width: 32px;
+    height: 32px;
+    background: var(--cream-mid);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
+    font-size: 14px;
+  }
+
+  .obs-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--ink-soft);
+    margin-bottom: 4px;
+  }
+
+  .obs-value {
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--ink);
+    line-height: 1.2;
+  }
+
+  .obs-note {
+    font-size: 12px;
+    color: var(--ink-soft);
+    margin-top: 4px;
+  }
+
+  /* APPROACH TEXT */
+  .lead {
+    font-size: 17px;
+    line-height: 1.75;
+    color: var(--ink-mid);
+    margin-bottom: 24px;
+    font-weight: 300;
+  }
+
+  .highlight-box {
+    background: var(--ink);
+    border-radius: 10px;
+    padding: 28px 32px;
+    margin: 32px 0;
+  }
+
+  .highlight-box p {
+    font-family: 'DM Serif Display', serif;
+    font-size: 20px;
+    color: var(--white);
+    line-height: 1.55;
+    font-style: italic;
+  }
+
+  .highlight-box p span {
+    color: var(--gold-light);
+  }
+
+  /* DELIVERABLES */
+  .deliverable-list {
+    margin: 32px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .deliverable-item {
+    display: grid;
+    grid-template-columns: 32px 1fr auto;
+    align-items: start;
+    padding: 18px 0;
+    border-bottom: 1px solid var(--cream-dark);
+    gap: 16px;
+  }
+
+  .deliverable-item:last-child { border-bottom: none; }
+
+  .del-num {
+    font-size: 12px;
+    color: var(--gold-dark);
+    font-weight: 500;
+    padding-top: 2px;
+    letter-spacing: 0.05em;
+  }
+
+  .del-body {}
+
+  .del-title {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--ink);
+    margin-bottom: 4px;
+  }
+
+  .del-desc {
+    font-size: 13px;
+    color: var(--ink-soft);
+    line-height: 1.6;
+  }
+
+  .del-tag {
+    font-size: 11px;
+    padding: 3px 10px;
+    border-radius: 3px;
+    background: var(--cream-mid);
+    color: var(--ink-soft);
+    white-space: nowrap;
+    align-self: flex-start;
+    margin-top: 2px;
+    letter-spacing: 0.04em;
+  }
+
+  .del-tag.critical {
+    background: #FEF3C7;
+    color: #92400E;
+  }
+
+  /* SYSTEM FLOW */
+  .flow-wrapper {
+    background: var(--ink);
+    border-radius: 12px;
+    padding: 40px 32px;
+    margin: 32px 0;
+    overflow-x: auto;
+  }
+
+  .flow-label {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: rgba(255,255,255,0.3);
+    margin-bottom: 24px;
+  }
+
+  .flow-row {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    margin-bottom: 20px;
+    flex-wrap: nowrap;
+    min-width: 600px;
+  }
+
+  .flow-node {
+    flex: 1;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 8px;
+    padding: 12px 14px;
+    text-align: center;
+  }
+
+  .flow-node.gold-node {
+    background: rgba(201,168,76,0.15);
+    border-color: rgba(201,168,76,0.4);
+  }
+
+  .flow-node .fn-label {
+    font-size: 11px;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 3px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  .flow-node .fn-title {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--white);
+  }
+
+  .flow-node.gold-node .fn-title {
+    color: var(--gold-light);
+  }
+
+  .flow-arrow {
+    color: rgba(255,255,255,0.25);
+    font-size: 18px;
+    padding: 0 6px;
+    flex-shrink: 0;
+  }
+
+  .flow-row-label {
+    font-size: 11px;
+    color: rgba(255,255,255,0.3);
+    margin-bottom: 6px;
+    letter-spacing: 0.08em;
+  }
+
+  /* STAFF TABLE */
+  .staff-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+    gap: 10px;
+    margin: 24px 0;
+  }
+
+  .staff-pill {
+    background: var(--white);
+    border: 1px solid var(--cream-dark);
+    border-radius: 6px;
+    padding: 10px 12px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--ink);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .staff-avatar {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: var(--cream-mid);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    font-weight: 500;
+    color: var(--ink-mid);
+    flex-shrink: 0;
+  }
+
+  /* PIPELINE */
+  .pipeline-row {
+    display: flex;
+    gap: 8px;
+    margin: 24px 0;
+    overflow-x: auto;
+    padding-bottom: 4px;
+  }
+
+  .pipe-stage {
+    flex: 1;
+    min-width: 110px;
+    background: var(--white);
+    border: 1px solid var(--cream-dark);
+    border-radius: 8px;
+    padding: 16px 12px;
+    position: relative;
+    text-align: center;
+  }
+
+  .pipe-stage::after {
+    content: '→';
+    position: absolute;
+    right: -14px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--cream-dark);
+    font-size: 16px;
+    z-index: 1;
+  }
+
+  .pipe-stage:last-child::after { display: none; }
+
+  .pipe-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin: 0 auto 10px;
+  }
+
+  .pipe-num {
+    font-size: 11px;
+    color: var(--ink-soft);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: 3px;
+  }
+
+  .pipe-title {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--ink);
+    line-height: 1.3;
+  }
+
+  /* TIMELINE */
+  .timeline {
+    margin: 32px 0;
+  }
+
+  .tl-item {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 24px;
+    margin-bottom: 24px;
+    align-start: start;
+  }
+
+  .tl-week {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--gold-dark);
+    padding-top: 2px;
+    font-weight: 500;
+  }
+
+  .tl-content {
+    border-left: 2px solid var(--cream-dark);
+    padding-left: 20px;
+    padding-bottom: 8px;
+  }
+
+  .tl-title {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--ink);
+    margin-bottom: 4px;
+  }
+
+  .tl-items-list {
+    font-size: 13px;
+    color: var(--ink-soft);
+    line-height: 1.8;
+  }
+
+  /* PRICING */
+  .pricing-card {
+    background: var(--ink);
+    border-radius: 12px;
+    padding: 40px;
+    margin: 32px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    align-items: center;
+  }
+
+  @media (max-width: 600px) {
+    .pricing-card { grid-template-columns: 1fr; }
+  }
+
+  .price-amount {
+    font-family: 'DM Serif Display', serif;
+    font-size: 52px;
+    color: var(--white);
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+
+  .price-amount span {
+    font-size: 24px;
+    color: var(--gold);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+  }
+
+  .price-label {
+    font-size: 12px;
+    color: rgba(255,255,255,0.4);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+
+  .price-note {
+    font-size: 13px;
+    color: rgba(255,255,255,0.5);
+    font-weight: 300;
+    line-height: 1.6;
+  }
+
+  .price-includes {
+    list-style: none;
+    padding: 0;
+  }
+
+  .price-includes li {
+    font-size: 13px;
+    color: rgba(255,255,255,0.7);
+    padding: 6px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .price-includes li:last-child { border-bottom: none; }
+
+  .check {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: rgba(201,168,76,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    color: var(--gold);
+    font-size: 9px;
+  }
+
+  /* WHY ME */
+  .why-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    margin: 32px 0;
+  }
+
+  .why-card {
+    background: var(--white);
+    border: 1px solid var(--cream-dark);
+    border-radius: 10px;
+    padding: 24px;
+  }
+
+  .why-number {
+    font-family: 'DM Serif Display', serif;
+    font-size: 36px;
+    color: var(--cream-dark);
+    line-height: 1;
+    margin-bottom: 12px;
+  }
+
+  .why-title {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--ink);
+    margin-bottom: 6px;
+  }
+
+  .why-desc {
+    font-size: 13px;
+    color: var(--ink-soft);
+    line-height: 1.6;
+  }
+
+  /* CTA */
+  .cta-section {
+    background: var(--cream-mid);
+    border-radius: 12px;
+    padding: 48px 40px;
+    margin: 40px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+    flex-wrap: wrap;
+  }
+
+  .cta-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: 28px;
+    color: var(--ink);
+    margin-bottom: 8px;
+  }
+
+  .cta-sub {
+    font-size: 14px;
+    color: var(--ink-soft);
+    font-weight: 300;
+  }
+
+  .cta-btn {
+    background: var(--ink);
+    color: var(--white);
+    padding: 14px 32px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    white-space: nowrap;
+    letter-spacing: 0.03em;
+    display: inline-block;
+  }
+
+  /* FOOTER */
+  .footer {
+    text-align: center;
+    padding: 40px;
+    font-size: 12px;
+    color: var(--ink-soft);
+    border-top: 1px solid var(--cream-dark);
+    letter-spacing: 0.06em;
+  }
+
+  /* UTILITIES */
+  p { margin-bottom: 16px; }
+  p:last-child { margin-bottom: 0; }
+
+  .tag-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 16px 0;
+  }
+
+  .tag {
+    font-size: 12px;
+    padding: 4px 12px;
+    border-radius: 3px;
+    background: var(--cream-mid);
+    color: var(--ink-soft);
+    border: 1px solid var(--cream-dark);
+    letter-spacing: 0.04em;
+  }
+
+  .tag.gold {
+    background: #FEF9EC;
+    color: var(--gold-dark);
+    border-color: var(--gold-light);
+  }
+
+  .inline-accent {
+    color: var(--gold-dark);
+    font-weight: 500;
+  }
+
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    margin: 24px 0;
+  }
+
+  @media (max-width: 580px) {
+    .two-col { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== COVER ===== -->
+<div class="cover">
+  <div class="cover-top">
+    <div class="cover-badge">Project Proposal</div>
+    <div class="cover-date">April 2026</div>
+  </div>
+
+  <div class="cover-body">
+    <div class="cover-label">GoHighLevel CRM &amp; Growth System</div>
+    <h1 class="cover-h1">From ad click to<br><em>loyal client</em>,<br>fully automated.</h1>
+    <div class="cover-divider"></div>
+    <p class="cover-sub">A complete Meta &amp; Google Ads to GoHighLevel lead capture, booking, CRM, and follow-up system, built specifically for Crossover Bollywood.</p>
+  </div>
+
+  <div class="cover-bottom">
+    <div>
+      <div class="cover-for">Prepared for</div>
+      <div class="cover-salon">Crossover Bollywood, Dubai</div>
+    </div>
+    <div class="cover-rating">
+      <span class="stars">★★★★★</span>
+      <span>4.8 · 392 reviews</span>
+    </div>
+  </div>
+</div>
+
+<!-- ===== PAGE CONTENT ===== -->
+<div class="page">
+
+  <!-- SECTION 1: RESEARCH -->
+  <span class="section-num">01 — Salon Overview</span>
+  <h2 class="section-title">I've done my<br><em>homework</em> on your salon.</h2>
+
+  <p class="lead">Before writing a single line of this proposal, I studied your Fresha profile, your services, your team, and how your salon operates today. Here's what I found:</p>
+
+  <div class="observation-grid">
+    <div class="obs-card">
+      <div class="obs-icon">★</div>
+      <div class="obs-label">Reputation</div>
+      <div class="obs-value">4.8 / 5</div>
+      <div class="obs-note">392 verified reviews on Fresha</div>
+    </div>
+    <div class="obs-card">
+      <div class="obs-icon">✂</div>
+      <div class="obs-label">Service menu</div>
+      <div class="obs-value">98 services</div>
+      <div class="obs-note">Hair, nails, facials, massage, men's, kids</div>
+    </div>
+    <div class="obs-card">
+      <div class="obs-icon">👥</div>
+      <div class="obs-label">Team size</div>
+      <div class="obs-value">9+ stylists</div>
+      <div class="obs-note">Samir, Bushra, Sangeetha, Rajinder, Ashok + more</div>
+    </div>
+    <div class="obs-card">
+      <div class="obs-icon">🕐</div>
+      <div class="obs-label">Operating hours</div>
+      <div class="obs-value">11AM – 9PM</div>
+      <div class="obs-note">7 days a week, 70 hrs/week</div>
+    </div>
+  </div>
+
+  <p>You currently use <span class="inline-accent">Fresha for booking</span>, which means I can map your existing service catalogue, staff profiles, and pricing into GoHighLevel without starting from zero. I will also import your existing <span class="inline-accent">6,000 Excel leads</span> into GHL, so your historical contacts and all new enquiries live inside one system.</p>
+
+  <div class="highlight-box">
+    <p>"You already have a <span>4.8-star salon with nearly 400 reviews</span>. The real opportunity is to centralise lead capture, follow-ups, reminders, and your existing lead database inside GoHighLevel so nothing slips through."</p>
+  </div>
+
+  <hr class="rule">
+
+  <!-- SECTION 2: THE SYSTEM -->
+  <span class="section-num">02 — The System</span>
+  <h2 class="section-title">What I'll <em>build</em> for you.</h2>
+
+  <p class="lead">A fully connected GoHighLevel system: every lead from your Meta and Google ads is captured, tagged, followed up, reminded, and moved toward booking inside one CRM. I will also bring your existing 6,000 Excel leads into the same database so everything runs from one place.</p>
+
+  <div class="flow-wrapper">
+    <div class="flow-label">End-to-end lead flow</div>
+
+    <div style="margin-bottom: 6px; font-size: 11px; color: rgba(255,255,255,0.3); text-transform: uppercase; letter-spacing: 0.1em;">Acquisition</div>
+    <div class="flow-row">
+      <div class="flow-node gold-node">
+        <div class="fn-label">Source</div>
+        <div class="fn-title">Meta Ad</div>
+      </div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-node gold-node">
+        <div class="fn-label">Source</div>
+        <div class="fn-title">Google Ad</div>
+      </div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-node">
+        <div class="fn-label">Entry point</div>
+        <div class="fn-title">GHL Lead Capture</div>
+      </div>
+    </div>
+
+    <div style="margin-bottom: 6px; font-size: 11px; color: rgba(255,255,255,0.3); text-transform: uppercase; letter-spacing: 0.1em;">Qualification</div>
+    <div class="flow-row">
+      <div class="flow-node">
+        <div class="fn-label">GHL Workflow</div>
+        <div class="fn-title">Capture name, service &amp; time</div>
+      </div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-node gold-node">
+        <div class="fn-label">CRM</div>
+        <div class="fn-title">Tagged lead in GHL pipeline</div>
+      </div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-node">
+        <div class="fn-label">Booking</div>
+        <div class="fn-title">Calendar slot confirmed</div>
+      </div>
+    </div>
+
+    <div style="margin-bottom: 6px; font-size: 11px; color: rgba(255,255,255,0.3); text-transform: uppercase; letter-spacing: 0.1em;">Retention &amp; tracking</div>
+    <div class="flow-row">
+      <div class="flow-node">
+        <div class="fn-label">Reminder</div>
+        <div class="fn-title">24hr + same-day GHL reminders</div>
+      </div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-node">
+        <div class="fn-label">Post-visit</div>
+        <div class="fn-title">GHL follow-up + rebook nudge</div>
+      </div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-node gold-node">
+        <div class="fn-label">Ad Platform</div>
+        <div class="fn-title">CAPI &amp; Enhanced Conversions</div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="rule">
+
+  <!-- SECTION 3: DELIVERABLES -->
+  <span class="section-num">03 — Deliverables</span>
+  <h2 class="section-title">Every item,<br><em>accounted for.</em></h2>
+
+  <div class="deliverable-list">
+
+    <div class="deliverable-item">
+      <div class="del-num">1.0</div>
+      <div class="del-body">
+        <div class="del-title">CRM + Pipeline Setup</div>
+        <div class="del-desc">Full GHL pipeline with 5 stages: New Lead ? Qualified ? Booking Requested ? Confirmed ? Completed. Leads tagged by gender (Male / Female) and service category (hair, nails, facial, massage, men's, kids). Custom fields align with your 98-service Fresha catalogue so the setup is organised from day one.</div>
+      </div>
+      <div class="del-tag">Foundation</div>
+    </div>
+
+    <div class="deliverable-item">
+      <div class="del-num">2.0</div>
+      <div class="del-body">
+        <div class="del-title">GHL Lead Capture + Inbox Setup</div>
+        <div class="del-desc">All lead capture will run directly through GoHighLevel. I'll set up the forms, workflows, tags, and inbox routing so every new enquiry lands in GHL with the right details, status, and follow-up path.</div>
+      </div>
+      <div class="del-tag">Core</div>
+    </div>
+
+    <div class="deliverable-item">
+      <div class="del-num">3.0</div>
+      <div class="del-body">
+        <div class="del-title">Appointment Booking System</div>
+        <div class="del-desc">Individual calendars for all 9+ staff members (Samir, Bushra, Sangeetha, Rajinder, Ashok, and the rest of your team). Services mapped to the right stylists. Service variants handled correctly ? for example, Hair Color ? Short / Medium / Long, each with its own duration and price tier. No double-bookings, no mismatched pricing.</div>
+      </div>
+      <div class="del-tag">Core</div>
+    </div>
+
+    <div class="deliverable-item">
+      <div class="del-num">4.0</div>
+      <div class="del-body">
+        <div class="del-title">GHL Follow-ups + Reminders</div>
+        <div class="del-desc">Booking confirmations, lead follow-ups, and reminders will all be handled inside GoHighLevel. This includes instant responses, 24-hour and same-day reminders, post-visit review requests, and rebooking nudges branded for Crossover Bollywood.</div>
+      </div>
+      <div class="del-tag">Retention</div>
+    </div>
+
+    <div class="deliverable-item">
+      <div class="del-num">5.0</div>
+      <div class="del-body">
+        <div class="del-title">Excel Lead Import into GHL</div>
+        <div class="del-desc">I will import your existing 6,000 leads from Excel into GoHighLevel, map the fields correctly, and organise the database so your historical leads and all new enquiries sit inside one CRM.</div>
+      </div>
+      <div class="del-tag">System</div>
+    </div>
+
+    <div class="deliverable-item">
+      <div class="del-num">6.0</div>
+      <div class="del-body">
+        <div class="del-title">Conversion Tracking (Server-Side)</div>
+        <div class="del-desc">Server-side CAPI for Meta Ads and Enhanced Conversions for Google Ads. Tracks: lead captured, qualified lead, and booking request as distinct conversion events. This is the step most agencies skip, and it is what lets you optimise your ad spend instead of flying blind.</div>
+      </div>
+      <div class="del-tag critical">Critical</div>
+    </div>
+
+    <div class="deliverable-item">
+      <div class="del-num">7.0</div>
+      <div class="del-body">
+        <div class="del-title">Cancellations + Rescheduling Handling</div>
+        <div class="del-desc">Intent detection workflows inside GHL recognise cancellation or rescheduling requests, suggest available slots, and update the booking with minimal manual intervention from your team.</div>
+      </div>
+      <div class="del-tag">Automation</div>
+    </div>
+
+  </div>
+
+  <!-- PIPELINE VISUAL -->
+  <p style="margin-top: 32px; margin-bottom: 12px; font-size: 13px; color: var(--ink-soft); text-transform: uppercase; letter-spacing: 0.1em;">CRM pipeline stages</p>
+  <div class="pipeline-row">
+    <div class="pipe-stage">
+      <div class="pipe-dot" style="background: #94A3B8;"></div>
+      <div class="pipe-num">Stage 1</div>
+      <div class="pipe-title">New Lead</div>
+    </div>
+    <div class="pipe-stage">
+      <div class="pipe-dot" style="background: #60A5FA;"></div>
+      <div class="pipe-num">Stage 2</div>
+      <div class="pipe-title">Qualified</div>
+    </div>
+    <div class="pipe-stage">
+      <div class="pipe-dot" style="background: #FBBF24;"></div>
+      <div class="pipe-num">Stage 3</div>
+      <div class="pipe-title">Booking Requested</div>
+    </div>
+    <div class="pipe-stage">
+      <div class="pipe-dot" style="background: #34D399;"></div>
+      <div class="pipe-num">Stage 4</div>
+      <div class="pipe-title">Confirmed</div>
+    </div>
+    <div class="pipe-stage">
+      <div class="pipe-dot" style="background: var(--gold);"></div>
+      <div class="pipe-num">Stage 5</div>
+      <div class="pipe-title">Completed</div>
+    </div>
+  </div>
+
+  <!-- STAFF CALENDARS -->
+  <p style="margin-top: 32px; margin-bottom: 12px; font-size: 13px; color: var(--ink-soft); text-transform: uppercase; letter-spacing: 0.1em;">Individual calendars set up for your full team</p>
+  <div class="staff-grid">
+    <div class="staff-pill"><div class="staff-avatar">SA</div>Samir</div>
+    <div class="staff-pill"><div class="staff-avatar">BU</div>Bushra</div>
+    <div class="staff-pill"><div class="staff-avatar">SG</div>Sangeetha</div>
+    <div class="staff-pill"><div class="staff-avatar">RJ</div>Rajinder</div>
+    <div class="staff-pill"><div class="staff-avatar">AS</div>Ashok</div>
+    <div class="staff-pill"><div class="staff-avatar">MA</div>Mariyan</div>
+    <div class="staff-pill"><div class="staff-avatar">SU</div>Sujatha</div>
+    <div class="staff-pill"><div class="staff-avatar">JA</div>Jalpa</div>
+    <div class="staff-pill"><div class="staff-avatar">FE</div>Felicisima</div>
+  </div>
+
+  <div class="tag-row" style="margin-top: 24px;">
+    <span class="tag gold">Hair Color ? Short / Medium / Long</span>
+    <span class="tag gold">Per-variant pricing + duration</span>
+    <span class="tag gold">Staff-to-service mapping</span>
+    <span class="tag gold">Male + Female calendars separated</span>
+    <span class="tag gold">6,000 existing leads unified in GHL</span>
+  </div>
+
+  <hr class="rule">
+
+  <!-- SECTION 4: TIMELINE -->
+  <span class="section-num">04 — Timeline</span>
+  <h2 class="section-title">Live in <em>1 week.</em></h2>
+
+  <p>The build is structured in three focused phases across one week so you see progress quickly and can give feedback as the setup moves forward.</p>
+
+  <div class="timeline">
+
+    <div class="tl-item">
+      <div class="tl-week">Days 1-2</div>
+      <div class="tl-content">
+        <div class="tl-title">Foundation &amp; Integration</div>
+        <div class="tl-items-list">
+          GHL account structure + pipeline setup<br>
+          Import and organise 6,000 Excel leads<br>
+          All 9 staff calendars created<br>
+          Services + variants mapped with correct pricing<br>
+          GHL lead capture foundations configured
+        </div>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-week">Days 3-5</div>
+      <div class="tl-content">
+        <div class="tl-title">Automations &amp; Booking Flows</div>
+        <div class="tl-items-list">
+          GHL lead capture workflows (name, service, time)<br>
+          Booking confirmation messages<br>
+          24hr + same-day reminders inside GHL<br>
+          Post-visit review request + rebook sequences<br>
+          Cancellation / rescheduling handling
+        </div>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-week">Days 6-7</div>
+      <div class="tl-content">
+        <div class="tl-title">Tracking, Testing &amp; Handover</div>
+        <div class="tl-items-list">
+          Meta CAPI + Google Enhanced Conversions setup<br>
+          End-to-end testing with live leads<br>
+          Team walkthrough + training<br>
+          Documentation + handover
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <hr class="rule">
+
+  <!-- SECTION 5: WHY ME -->
+  <span class="section-num">05 — Why Me</span>
+  <h2 class="section-title">What you're<br><em>actually</em> getting.</h2>
+
+  <div class="why-grid">
+    <div class="why-card">
+      <div class="why-number">GHL</div>
+      <div class="why-title">GHL power user, not a generalist</div>
+      <div class="why-desc">I work in GoHighLevel full-time. I know where the platform does things well and where you need to work around it. No learning curve on your dime.</div>
+    </div>
+    <div class="why-card">
+      <div class="why-number">CRM</div>
+      <div class="why-title">Everything managed inside GHL</div>
+      <div class="why-desc">Lead capture, follow-ups, reminders, and database management are configured directly in GoHighLevel so you are not juggling disconnected tools.</div>
+    </div>
+    <div class="why-card">
+      <div class="why-number">📡</div>
+      <div class="why-title">Server-side tracking specialist</div>
+      <div class="why-desc">Most freelancers skip CAPI or implement it partially. I implement it properly — matching events, deduplication, test event verification in Meta Events Manager.</div>
+    </div>
+    <div class="why-card">
+      <div class="why-number">✂</div>
+      <div class="why-title">Service business background</div>
+      <div class="why-desc">I understand the specific dynamics of salons: staff preferences, service duration variance, no-show rates, and what actually drives rebooking. This isn't a generic CRM build.</div>
+    </div>
+  </div>
+
+  <hr class="rule">
+
+  <!-- SECTION 6: PRICING -->
+  <span class="section-num">06 — Investment</span>
+  <h2 class="section-title">Pricing &amp; <em>scope.</em></h2>
+
+  <div class="pricing-card">
+    <div>
+      <div class="price-label">One-time project fee</div>
+      <div class="price-amount"><span>$</span>350</div>
+      <div class="price-note" style="margin-top: 16px;">Covers the agreed build: GHL setup, GHL-native lead capture, follow-ups and reminders, calendar configuration, 6,000-lead Excel import, and final handover. Fixed scope, fixed price.<br><br>Optional monthly support can be added later if required.</div>
+    </div>
+    <div>
+      <ul class="price-includes">
+        <li><span class="check">?</span> GHL pipeline + CRM setup</li>
+        <li><span class="check">?</span> GHL lead capture workflows</li>
+        <li><span class="check">?</span> All 9 staff calendars + services</li>
+        <li><span class="check">?</span> GHL follow-ups + reminders</li>
+        <li><span class="check">?</span> 6,000 Excel leads imported into GHL</li>
+        <li><span class="check">?</span> Meta CAPI + Google Enhanced Conversions</li>
+        <li><span class="check">?</span> Cancellation / rescheduling handling</li>
+        <li><span class="check">?</span> Team training + documentation</li>
+        <li><span class="check">?</span> 2 weeks post-launch support</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="two-col" style="margin-top: 0;">
+    <div style="background: var(--white); border: 1px solid var(--cream-dark); border-radius: 10px; padding: 24px;">
+      <div style="font-size: 12px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--ink-soft); margin-bottom: 10px;">To get started</div>
+      <div style="font-size: 15px; color: var(--ink); line-height: 1.7;">50% upfront, 50% on final delivery. I'll send a contract and invoice within 24 hours of your confirmation.</div>
+    </div>
+    <div style="background: var(--white); border: 1px solid var(--cream-dark); border-radius: 10px; padding: 24px;">
+      <div style="font-size: 12px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--ink-soft); margin-bottom: 10px;">What I need from you</div>
+      <div style="font-size: 15px; color: var(--ink); line-height: 1.7;">GHL account access, the Excel lead file, Meta/Google Ads access, and a 30 min onboarding call. If you want WhatsApp connected inside GHL, I'll also need access to that business number.</div>
+    </div>
+  </div>
+
+</div>
+
+<div class="footer">
+  Prepared exclusively for Crossover Bollywood · Dubai · April 2026
+</div>
+
+</body>
+</html>
